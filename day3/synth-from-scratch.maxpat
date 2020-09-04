@@ -226,7 +226,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 704.0, 110.0, 91.0, 22.0 ],
+					"patching_rect" : [ 674.0, 110.0, 91.0, 22.0 ],
 					"text" : "setdomain 0 $1"
 				}
 
