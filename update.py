@@ -30,6 +30,7 @@ def checkAbleton(otherFiles):
         if not f in otherFiles:
             print(f, ": not found, copying to current folder")
             shutil.copy2(abletonPath + f, './' + f)                 
+            matches = True
     if not matches:
         print("No new files found")
 
