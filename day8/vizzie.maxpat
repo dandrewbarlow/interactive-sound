@@ -40,6 +40,52 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "## Up/downsample a video ##",
+					"bgmode" : 1,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-13",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "vz.zamplr.maxpat",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "jit_gl_texture" ],
+					"patching_rect" : [ 29.0, 511.0, 228.0, 130.0 ],
+					"prototypename" : "pixl",
+					"varname" : "zamplr",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "## A 4 x 4 video patching matrix for VIZZIE ##",
+					"bgmode" : 1,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-21",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "vz.patchroutr.maxpat",
+					"numinlets" : 8,
+					"numoutlets" : 5,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "", "", "", "", "" ],
+					"patching_rect" : [ 293.0, 223.0, 318.0, 232.0 ],
+					"prototypename" : "pixl",
+					"varname" : "patchroutr",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"annotation" : "## A video delay line ##",
 					"bgmode" : 1,
 					"border" : 0,
@@ -100,7 +146,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 317.0, 385.0, 168.0, 108.0 ],
+					"patching_rect" : [ 329.0, 500.0, 168.0, 108.0 ],
 					"prototypename" : "pixl",
 					"varname" : "projectr",
 					"viewvisibility" : 1
@@ -145,7 +191,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 491.0, 363.0, 230.0, 208.0 ],
+					"patching_rect" : [ 503.0, 478.0, 230.0, 208.0 ],
 					"prototypename" : "pixl",
 					"varname" : "viewr",
 					"viewvisibility" : 1
@@ -203,7 +249,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 29.5, 483.0, 303.0, 483.0, 303.0, 357.0, 500.5, 357.0 ],
+					"midpoints" : [ 29.5, 483.0, 489.0, 483.0, 489.0, 474.0, 512.5, 474.0 ],
 					"order" : 0,
 					"source" : [ "obj-12", 0 ]
 				}
@@ -212,7 +258,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
-					"midpoints" : [ 29.5, 483.0, 303.0, 483.0, 303.0, 381.0, 326.5, 381.0 ],
+					"midpoints" : [ 29.5, 486.0, 338.5, 486.0 ],
 					"order" : 1,
 					"source" : [ "obj-12", 0 ]
 				}
@@ -253,6 +299,18 @@
 			"obj-12::obj-56::obj-23" : [ "gswitch2[4]", "gswitch2", 0 ],
 			"obj-12::obj-7" : [ "range[4]", "range", 0 ],
 			"obj-12::obj-9" : [ "Delay", "Delay", 0 ],
+			"obj-13::obj-100" : [ "Gain", "Gain", 0 ],
+			"obj-13::obj-101" : [ "Color mode", "Color mode", 0 ],
+			"obj-13::obj-16" : [ "range[24]", "range", 0 ],
+			"obj-13::obj-21" : [ "pictctrl[72]", "pictctrl[1]", 0 ],
+			"obj-13::obj-28" : [ "pictctrl[71]", "pictctrl[1]", 0 ],
+			"obj-13::obj-50" : [ "pictctrl[70]", "pictctrl[1]", 0 ],
+			"obj-13::obj-56::obj-23" : [ "gswitch2[10]", "gswitch2", 0 ],
+			"obj-13::obj-68" : [ "horizontal[3]", "horizontal", 0 ],
+			"obj-13::obj-79" : [ "pictctrl[74]", "pictctrl[1]", 0 ],
+			"obj-13::obj-94" : [ "Bound mode", "Bound mode", 0 ],
+			"obj-13::obj-98" : [ "V offset", "V offset", 0 ],
+			"obj-13::obj-99" : [ "H offset", "H offset", 0 ],
 			"obj-19::obj-12" : [ "Fullscreen", "Fullscreen", 0 ],
 			"obj-19::obj-16" : [ "Toggle display", "Toggle display", 0 ],
 			"obj-19::obj-1::obj-23" : [ "gswitch2[2]", "gswitch2", 0 ],
@@ -263,6 +321,18 @@
 			"obj-19::obj-6" : [ "live.toggle[1]", "live.toggle", 0 ],
 			"obj-1::obj-20" : [ "letterbox_menu", "letterbox_menu", 0 ],
 			"obj-1::obj-37" : [ "aspect_menu", "aspect_menu", 0 ],
+			"obj-21::obj-100" : [ "Reset", "Reset", 0 ],
+			"obj-21::obj-23" : [ "range[1]", "range", 0 ],
+			"obj-21::obj-2::obj-23" : [ "gswitch2[5]", "gswitch2", 0 ],
+			"obj-21::obj-36::obj-23" : [ "gswitch2[6]", "gswitch2", 0 ],
+			"obj-21::obj-40::obj-23" : [ "gswitch2[7]", "gswitch2", 0 ],
+			"obj-21::obj-47::obj-23" : [ "gswitch2[8]", "gswitch2", 0 ],
+			"obj-21::obj-50::obj-23" : [ "gswitch2[9]", "gswitch2", 0 ],
+			"obj-21::obj-77" : [ "Random", "Random", 0 ],
+			"obj-21::obj-85" : [ "pictctrl[80]", "pictctrl[1]", 0 ],
+			"obj-21::obj-92" : [ "pictctrl[103]", "pictctrl[1]", 0 ],
+			"obj-21::obj-94" : [ "Effects", "Effects", 0 ],
+			"obj-21::obj-95" : [ "pictctrl[102]", "pictctrl[3]", 0 ],
 			"obj-35::obj-104" : [ "pictctrl[9]", "pictctrl[1]", 0 ],
 			"obj-35::obj-119" : [ "Brightness", "Brightness", 0 ],
 			"obj-35::obj-120" : [ "Brightness range", "Brightness range", 1 ],
@@ -527,6 +597,41 @@
 			}
 , 			{
 				"name" : "xfade.genjit",
+				"bootpath" : "~/Library/Application Support/Cycling '74/Max 8/Examples/jitter-examples/gen",
+				"patcherrelativepath" : "../../../../../Library/Application Support/Cycling '74/Max 8/Examples/jitter-examples/gen",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "vz.patchroutr.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Vizzie/patchers",
+				"patcherrelativepath" : "../../../../../Documents/Max 8/Packages/Vizzie/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "ctl_matrix_button.jpg",
+				"bootpath" : "~/Documents/Max 8/Packages/Vizzie/media",
+				"patcherrelativepath" : "../../../../../Documents/Max 8/Packages/Vizzie/media",
+				"type" : "JPEG",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "vz.zamplr.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Vizzie/patchers",
+				"patcherrelativepath" : "../../../../../Documents/Max 8/Packages/Vizzie/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "ameba.genjit",
+				"bootpath" : "~/Library/Application Support/Cycling '74/Max 8/Examples/jitter-examples/gen",
+				"patcherrelativepath" : "../../../../../Library/Application Support/Cycling '74/Max 8/Examples/jitter-examples/gen",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "rgb2luma.genjit",
 				"bootpath" : "~/Library/Application Support/Cycling '74/Max 8/Examples/jitter-examples/gen",
 				"patcherrelativepath" : "../../../../../Library/Application Support/Cycling '74/Max 8/Examples/jitter-examples/gen",
 				"type" : "gJIT",
