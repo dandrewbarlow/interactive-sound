@@ -1,0 +1,14 @@
+{
+  "name": "weather-boi",
+  "version": "1.0.0",
+  "description": "Let the weather talk about you",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Barlow",
+  "license": "MIT",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
