@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    border: 5px solid black;
+    height: 205px;
+}
+
+.note {
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-right: 1px solid black;
+    cursor: pointer;
+}
+
+.note:hover{
+    background: rgba(255, 0, 0, 0.5);
+    border-right: 5px solid black;
+    border-left: 3px solid white;
+}
